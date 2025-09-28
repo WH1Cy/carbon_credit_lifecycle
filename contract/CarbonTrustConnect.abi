@@ -1,0 +1,1600 @@
+[
+    {
+        "inputs": [],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "certificateId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "recordIndex",
+                "type": "uint256"
+            }
+        ],
+        "name": "CertificateHistoryUpdated",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "batchId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "recordIndex",
+                "type": "uint256"
+            }
+        ],
+        "name": "CreditHistoryUpdated",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "projectId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "recordIndex",
+                "type": "uint256"
+            }
+        ],
+        "name": "ProjectHistoryUpdated",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "projectId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "recordIndex",
+                "type": "uint256"
+            }
+        ],
+        "name": "ReviewHistoryUpdated",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "userAddress",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "recordIndex",
+                "type": "uint256"
+            }
+        ],
+        "name": "UserHistoryUpdated",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_projectId",
+                "type": "uint256"
+            }
+        ],
+        "name": "acceptVerification",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_user",
+                "type": "address"
+            },
+            {
+                "internalType": "enum CarbonTrustConnect.Role[]",
+                "name": "_newRoles",
+                "type": "uint8[]"
+            },
+            {
+                "internalType": "string",
+                "name": "_reason",
+                "type": "string"
+            }
+        ],
+        "name": "adminSetUserRoles",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_projectId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "_name",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_location",
+                "type": "string"
+            },
+            {
+                "internalType": "enum CarbonTrustConnect.Technology[]",
+                "name": "_technologies",
+                "type": "uint8[]"
+            },
+            {
+                "internalType": "string",
+                "name": "_description",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_reduction",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string[]",
+                "name": "_documentsHash",
+                "type": "string[]"
+            },
+            {
+                "internalType": "string",
+                "name": "_reason",
+                "type": "string"
+            }
+        ],
+        "name": "adminUpdateProjectDetails",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_user",
+                "type": "address"
+            },
+            {
+                "internalType": "string",
+                "name": "_name",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_bio",
+                "type": "string"
+            },
+            {
+                "internalType": "string[]",
+                "name": "_credentialsHash",
+                "type": "string[]"
+            },
+            {
+                "internalType": "string",
+                "name": "_reason",
+                "type": "string"
+            }
+        ],
+        "name": "adminUpdateUserProfile",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "allUsers",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_projectId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "_reason",
+                "type": "string"
+            }
+        ],
+        "name": "banProject",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "certificateHistory",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "timestamp",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "creditBatchId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "quantity",
+                "type": "uint256"
+            },
+            {
+                "internalType": "enum CarbonTrustConnect.CertificateStatus",
+                "name": "status",
+                "type": "uint8"
+            },
+            {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "ownerRecordIndex",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "editor",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "editorRecordIndex",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "editReason",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "creditHistory",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "timestamp",
+                "type": "uint256"
+            },
+            {
+                "internalType": "enum CarbonTrustConnect.CreditEventType",
+                "name": "eventType",
+                "type": "uint8"
+            },
+            {
+                "internalType": "uint256",
+                "name": "projectId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "vintageYear",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "quantity",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "currentOwner",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "ownerRecordIndex",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "from",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "fromRecordIndex",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "to",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "toRecordIndex",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "parentBatchId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "childBatchId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "reason",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_projectId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "bool",
+                "name": "_isApproved",
+                "type": "bool"
+            },
+            {
+                "internalType": "string",
+                "name": "_comment",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_creditQuantityToIssue",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_vintageYear",
+                "type": "uint256"
+            }
+        ],
+        "name": "finalizeVerification",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getAllCertificatesWithDetails",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "timestamp",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "id",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "creditBatchId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "quantity",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "enum CarbonTrustConnect.CertificateStatus",
+                        "name": "status",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "owner",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "ownerRecordIndex",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "editor",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "editorRecordIndex",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "editReason",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct CarbonTrustConnect.CertificateRecord[]",
+                "name": "",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getAllCreditBatchesWithDetails",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "timestamp",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "enum CarbonTrustConnect.CreditEventType",
+                        "name": "eventType",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "projectId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "vintageYear",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "quantity",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "currentOwner",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "ownerRecordIndex",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "from",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "fromRecordIndex",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "to",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "toRecordIndex",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "parentBatchId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "childBatchId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "reason",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct CarbonTrustConnect.CreditRecord[]",
+                "name": "",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getAllProjectsWithDetails",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "timestamp",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "id",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "owner",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "ownerRecordIndex",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "location",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "enum CarbonTrustConnect.Technology[]",
+                        "name": "technologies",
+                        "type": "uint8[]"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "description",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "reduction",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "enum CarbonTrustConnect.ProjectStatus",
+                        "name": "status",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "string[]",
+                        "name": "documentsHash",
+                        "type": "string[]"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "editor",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "editorRecordIndex",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "editReason",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct CarbonTrustConnect.ProjectRecord[]",
+                "name": "",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getAllTrackedUsers",
+        "outputs": [
+            {
+                "internalType": "address[]",
+                "name": "",
+                "type": "address[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getAllUserRecords",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "timestamp",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "addr",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "bio",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string[]",
+                        "name": "credentialsHash",
+                        "type": "string[]"
+                    },
+                    {
+                        "internalType": "enum CarbonTrustConnect.Role[]",
+                        "name": "roles",
+                        "type": "uint8[]"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "editor",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "editorRecordIndex",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "editReason",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct CarbonTrustConnect.UserRecord[]",
+                "name": "",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_certificateId",
+                "type": "uint256"
+            }
+        ],
+        "name": "getCertificateHistoryRecord",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "timestamp",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "id",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "creditBatchId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "quantity",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "enum CarbonTrustConnect.CertificateStatus",
+                        "name": "status",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "owner",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "ownerRecordIndex",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "editor",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "editorRecordIndex",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "editReason",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct CarbonTrustConnect.CertificateRecord[]",
+                "name": "",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getCounters",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "projectCounter",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "creditBatchCounter",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "certificateCounter",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_batchId",
+                "type": "uint256"
+            }
+        ],
+        "name": "getCreditHistoryRecord",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "timestamp",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "enum CarbonTrustConnect.CreditEventType",
+                        "name": "eventType",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "projectId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "vintageYear",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "quantity",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "currentOwner",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "ownerRecordIndex",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "from",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "fromRecordIndex",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "to",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "toRecordIndex",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "parentBatchId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "childBatchId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "reason",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct CarbonTrustConnect.CreditRecord[]",
+                "name": "",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getPlatformSummary",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_projectId",
+                "type": "uint256"
+            }
+        ],
+        "name": "getProjectHistoryRecord",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "timestamp",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "id",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "owner",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "ownerRecordIndex",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "location",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "enum CarbonTrustConnect.Technology[]",
+                        "name": "technologies",
+                        "type": "uint8[]"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "description",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "reduction",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "enum CarbonTrustConnect.ProjectStatus",
+                        "name": "status",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "string[]",
+                        "name": "documentsHash",
+                        "type": "string[]"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "editor",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "editorRecordIndex",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "editReason",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct CarbonTrustConnect.ProjectRecord[]",
+                "name": "",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_projectId",
+                "type": "uint256"
+            }
+        ],
+        "name": "getReviewHistoryRecord",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "timestamp",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "handlingVerifier",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "verifierRecordIndex",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "approved",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "comment",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "issuedBatchId",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct CarbonTrustConnect.ReviewRecord[]",
+                "name": "",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_user",
+                "type": "address"
+            }
+        ],
+        "name": "getUserHistoryRecord",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "timestamp",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "addr",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "bio",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string[]",
+                        "name": "credentialsHash",
+                        "type": "string[]"
+                    },
+                    {
+                        "internalType": "enum CarbonTrustConnect.Role[]",
+                        "name": "roles",
+                        "type": "uint8[]"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "editor",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "editorRecordIndex",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "editReason",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct CarbonTrustConnect.UserRecord[]",
+                "name": "",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_buyer",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_quantity",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_vintageYear",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "_reason",
+                "type": "string"
+            }
+        ],
+        "name": "mintCreditsForBuyer",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "projectHistory",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "timestamp",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "ownerRecordIndex",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "location",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "description",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "reduction",
+                "type": "uint256"
+            },
+            {
+                "internalType": "enum CarbonTrustConnect.ProjectStatus",
+                "name": "status",
+                "type": "uint8"
+            },
+            {
+                "internalType": "address",
+                "name": "editor",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "editorRecordIndex",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "editReason",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "projectReviewHistory",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "timestamp",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "handlingVerifier",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "verifierRecordIndex",
+                "type": "uint256"
+            },
+            {
+                "internalType": "bool",
+                "name": "approved",
+                "type": "bool"
+            },
+            {
+                "internalType": "string",
+                "name": "comment",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "issuedBatchId",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "_name",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_location",
+                "type": "string"
+            },
+            {
+                "internalType": "enum CarbonTrustConnect.Technology[]",
+                "name": "_technologies",
+                "type": "uint8[]"
+            },
+            {
+                "internalType": "string",
+                "name": "_description",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_reduction",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string[]",
+                "name": "_documentsHash",
+                "type": "string[]"
+            },
+            {
+                "internalType": "string",
+                "name": "_reason",
+                "type": "string"
+            }
+        ],
+        "name": "registerProject",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_batchId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_quantity",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "_retirementReason",
+                "type": "string"
+            }
+        ],
+        "name": "retireCredits",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_certificateId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "_reason",
+                "type": "string"
+            }
+        ],
+        "name": "revokeCertificate",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_batchId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "_reason",
+                "type": "string"
+            }
+        ],
+        "name": "revokeCredits",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_batchId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_quantity",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "_to",
+                "type": "address"
+            }
+        ],
+        "name": "splitAndTransfer",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_projectId",
+                "type": "uint256"
+            }
+        ],
+        "name": "submitForVerification",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_projectId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "_name",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_location",
+                "type": "string"
+            },
+            {
+                "internalType": "enum CarbonTrustConnect.Technology[]",
+                "name": "_technologies",
+                "type": "uint8[]"
+            },
+            {
+                "internalType": "string",
+                "name": "_description",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_reduction",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string[]",
+                "name": "_documentsHash",
+                "type": "string[]"
+            },
+            {
+                "internalType": "string",
+                "name": "_reason",
+                "type": "string"
+            }
+        ],
+        "name": "updateProjectDetails",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "_name",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_bio",
+                "type": "string"
+            },
+            {
+                "internalType": "string[]",
+                "name": "_credentialsHash",
+                "type": "string[]"
+            },
+            {
+                "internalType": "string",
+                "name": "_reason",
+                "type": "string"
+            }
+        ],
+        "name": "updateUserProfile",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "userRecordHistory",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "timestamp",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "addr",
+                "type": "address"
+            },
+            {
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "bio",
+                "type": "string"
+            },
+            {
+                "internalType": "address",
+                "name": "editor",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "editorRecordIndex",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "editReason",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]
